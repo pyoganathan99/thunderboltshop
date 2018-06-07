@@ -1,236 +1,341 @@
 <html>
-    <head>
 
-        <meta charset="utf-8">
+<head>
 
-        <title>Thunderbolt</title>
+    <meta charset="utf-8">
 
-        <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Thunderbolt</title>
 
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-        <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
-        <style>
-        
-            .brand-logo {
-                font-family: 'Amatic SC', sans-serif;
-            }
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
-            nav {
-                padding-left: 32px;
-                padding-right: 32px
-            }
+    <style>
+        .brand-logo {
+            font-family: 'Amatic SC', sans-serif;
+        }
 
-            a, h5, h6, h4, body {
-                font-family: 'Open Sans', sans-serif;
-            }
+        nav {
+            padding-left: 32px;
+            padding-right: 32px;
+        }
 
-            .parallax-container {
-                height: 240px;
-            }
+        a,
+        h5,
+        h6,
+        h4,
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
 
-            .parallax-container {
-                min-height: 380px;
-                line-height: 0;
-                height: auto;
-                color: rgba(255,255,255,.9);
-            }
+        .parallax-container {
+            height: 240px;
+        }
+
+        .parallax-container {
+            min-height: 380px;
+            line-height: 0;
+            height: auto;
+            color: rgba(255, 255, 255, .9);
+        }
+
+        .parallax-container .section {
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 992px) {
             .parallax-container .section {
-                width: 100%;
+                position: absolute;
+                top: 40%;
             }
-
-            @media only screen and (max-width : 992px) {
-                .parallax-container .section {
-                    position: absolute;
-                    top: 40%;
-                }
-                #index-banner .section {
-                    top: 10%;
-                }
+            #index-banner .section {
+                top: 10%;
             }
+        }
 
 
-            @media only screen and (max-width : 600px) {
-                #index-banner .section {
-                    top: 0;
-                }
+        @media only screen and (max-width: 600px) {
+            #index-banner .section {
+                top: 0;
             }
+        }
 
-            .icon-block {
-                padding: 0 15px;
-            }
+        .icon-block {
+            padding: 0 15px;
+        }
 
-            .icon-block .material-icons {
-                font-size: inherit;
-            }
+        .icon-block .material-icons {
+            font-size: inherit;
+        }
 
-            .card {
-                margin-left: 0px;
-                margin-right: 0px;
-                margin-top: 12px;
-                margin-bottom: 12px;
-            }
+        .card {
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-top: 12px;
+            margin-bottom: 12px;
+        }
 
-        
-        </style>
+        .products .products>.carousel-item {
+            width: 240px !important;
+        }
 
-    </head>
+        .products {
+            margin-top: -86px;
+            margin-bottom: -80px;
+        }
 
-    <body>
+        .center-cropped {
+            width: 240px;
+            height: 240px;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
 
-        <div class="navbar-fixed">
+        .material-icons {
+            vertical-align: middle;
+        }
+    </style>
 
-            <nav class="white">
-                <div class="nav-wrapper">
-                    <a href="#" class="brand-logo black-text">Thunderbolt Shop</a>
-                    <a href="#" data-activates="mobile-demo" class="button-collapse black-text"><i class="material-icons">menu</i></a>
-                    <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li><a class="black-text">Crafts</a></li>
-                        <li><a class="black-text">Arts</a></li>
-                        <li><a class="black-text">Posters</a></li>
-                        <li><a class="black-text">Contact Us</a></li>
-                    </ul>
+</head>
+
+<body>
+
+    <div class="navbar-fixed">
+
+        <nav class="white">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo black-text">Thunderbolt Shop</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse black-text"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a class="black-text">Crafts</a></li>
+                    <li><a class="black-text">Arts</a></li>
+                    <li><a class="black-text">Posters</a></li>
+                    <li><a class="black-text">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </div>
+
+
+    <ul class="side-nav" id="mobile-demo">
+        <img src="background1.png" width="300px" style="margin-bottom:24px">
+        <li><a class="black-text">Crafts</a></li>
+        <li><a class="black-text">Arts</a></li>
+        <li><a class="black-text">Posters</a></li>
+        <li><a class="black-text">Contact Us</a></li>
+    </ul>
+
+    <center>
+        <h5 style="margin:24px; margin-top:36px; color:rgba(0, 0, 0, 0.8)">Things we can do...</h5>
+    </center>
+
+    <div class="carousel products">
+        <a class="carousel-item" href="#two!">
+            <img src="gift.png">
+            <center class="black-text">Birthday Gifts</center>
+        </a>
+        <a class="carousel-item" href="#three!">
+            <img src="photo.png">
+            <center class="black-text">Posters, cards</center>
+        </a>
+        <a class="carousel-item" href="#four!">
+            <img src="cal.png">
+            <center class="black-text">Calendars</center>
+        </a>
+        <a class="carousel-item" href="#five!">
+            <img src="gall.png">
+            <center class="black-text">Framed Photos</center>
+        </a>
+        <a class="carousel-item" href="#one!">
+            <img src="tee.png">
+            <center class="black-text">Printed Tees</center>
+        </a>
+    </div>
+
+    <br>
+
+    <center>
+        <span><h5 style="margin:24px; margin-top:36px; color:rgba(0, 0, 0, 0.8)">Let's get your order placed!</h5></span>
+        <span>
+            <h6>
+                Your assets
+                <i class="material-icons">keyboard_arrow_right</i>
+                What we should do
+                <i class="material-icons">keyboard_arrow_right</i>
+                Final Product
+            </h6>
+        </span>
+
+        <br>
+
+    </center>
+
+    <div class="row">
+        <div class="col l8 offset-l2">
+            <div class="carousel z-depth-3 stages carousel-slider center">
+                <div class="carousel-fixed-item center">
+                    <a class="btn waves-effect white grey-text darken-text-2">button</a>
                 </div>
-            </nav>   
-        
+                <div class="carousel-item red z-depth-3" style="padding:2px;" href="#one!">
+                    <h2>First Panel</h2>
+                    <p>This is your first panel</p>
+                </div>
+                <div class="carousel-item amber" href="#two!">
+                    <h2>Second Panel</h2>
+                    <p>This is your second panel</p>
+                </div>
+                <div class="carousel-item green " href="#three!">
+                    <h2>Third Panel</h2>
+                    <p>This is your third panel</p>
+                </div>
+                <div class="carousel-item blue" href="#four!">
+                    <h2>Fourth Panel</h2>
+                    <p>This is your fourth panel</p>
+                </div>
+            </div>
         </div>
+    </div>
 
-        
-        <ul class="side-nav" id="mobile-demo">
-            <img src="background1.png" width="300px" style="margin-bottom:24px">
-            <li><a class="black-text">Crafts</a></li>
-            <li><a class="black-text">Arts</a></li>
-            <li><a class="black-text">Posters</a></li>
-            <li><a class="black-text">Contact Us</a></li>
-        </ul>
-        
-        <div class="row">
 
-            <div class="col l1"></div>
 
-                <div class="col l10">
+    <div class="row">
 
-                    <h4 style="margin:24px; margin-top:36px; color:rgba(0, 0, 0, 0.8)">Arts</h4>
+        <div class="col l1"></div>
 
-                    <div class="row">
+        <div class="col l10">
 
-                        <div class="col s12 m6 l3">
-                                
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="sample1.jpg">
-                                </div>
-                                <div class="card-content">                        
-                                    <span class="card-title">Item 1</span>
-                                    <p>Item numbered 1</p>
-                                </div>
-                            </div>
-        
+            <h5 style="margin:24px; margin-top:36px; color:rgba(0, 0, 0, 0.8)">Arts</h5>
+
+            <div class="row">
+
+                <div class="col s12 m6 l3">
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="sample1.jpg">
                         </div>
-
-                        <div class="col s12 m6 l3">
-                                
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="sample2.jpg">
-                                </div>
-                                <div class="card-content">                        
-                                    <span class="card-title">Item 2</span>
-                                    <p>Item numbered 2</p>
-                                </div>
-                            </div>
-        
+                        <div class="card-content">
+                            <span class="card-title">Item 1</span>
+                            <p>Item numbered 1</p>
                         </div>
-
-                        <div class="col s12 m6 l3">
-                                
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="sample3.jpg">
-                                </div>
-                                <div class="card-content">                        
-                                    <span class="card-title">Item 3</span>
-                                    <p>Item numbered 3</p>
-                                </div>
-                            </div>
-        
-                        </div>
-                                            
-                        <div class="col s12 m6 l3">
-                                
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="sample4.jpg">
-                                </div>
-                                <div class="card-content">                        
-                                    <span class="card-title">Item 4</span>
-                                    <p>Item numbered 4</p>
-                                </div>
-                            </div>
-        
-                        </div>
-
-                        
-                        <div class="col s12 m6 l3">
-                                
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="sample5.png">
-                                </div>
-                                <div class="card-content">                        
-                                    <span class="card-title">Item 5</span>
-                                    <p>Item numbered 5</p>
-                                </div>
-                            </div>
-        
-                        </div>
-
-                        
-                        <div class="col s12 m6 l3">
-                                
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="sample6.png">
-                                </div>
-                                <div class="card-content">                        
-                                    <span class="card-title">Item 6</span>
-                                    <p>Item numbered 6</p>
-                                </div>
-                            </div>
-        
-                        </div>
-
                     </div>
 
-                </div>   
-        
-            <div class="col l1"></div>
+                </div>
+
+                <div class="col s12 m6 l3">
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="sample2.jpg">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Item 2</span>
+                            <p>Item numbered 2</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col s12 m6 l3">
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="sample3.jpg">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Item 3</span>
+                            <p>Item numbered 3</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col s12 m6 l3">
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="sample4.jpg">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Item 4</span>
+                            <p>Item numbered 4</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="col s12 m6 l3">
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="sample5.png">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Item 5</span>
+                            <p>Item numbered 5</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="col s12 m6 l3">
+
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="sample6.png">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Item 6</span>
+                            <p>Item numbered 6</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
-        
-        <footer class="page-footer blue">
-            <div class="container" style="padding-bottom:16px;">
-                From the team of <a class="white-text text-lighten-3" href="http://materializecss.com">CANDiD</a>
-            </div>
-        </footer>        
-        
-    </body>
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <div class="col l1"></div>
 
-    <script>
+    </div>
 
-        $(".button-collapse").sideNav();
+    <footer class="page-footer blue">
+        <div class="container" style="padding-bottom:16px;">
+            From the team of <a class="white-text text-lighten-3" href="http://materializecss.com">CANDiD</a>
+        </div>
+    </footer>
 
-        $(document).ready(function(){
-            $('.parallax').parallax();
-        });
+</body>
 
-    </script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+<script>
+    $(".button-collapse").sideNav();
+
+    $(document).ready(function () {
+        $('.parallax').parallax();
+        $('.products').carousel();
+
+        $('.stages').carousel({ fullWidth: true });
+
+        // var carousel = $('.stages').carousel();
+        // // Disable all swipping on carousel
+        // if (typeof window.ontouchstart !== 'undefined') {
+        //     carousel.off('touchstart.carousel');
+        // }
+        // carousel.off('mousedown.carousel');
+    });
+
+</script>
 
 </html>
