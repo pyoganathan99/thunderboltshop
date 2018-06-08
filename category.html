@@ -125,6 +125,21 @@
         .collapsible-body {
             padding: 12px;
         }
+
+        .dot {
+            cursor: pointer;
+            height: 3px;
+            width: 18px;
+            margin: 0 2px;
+            background-color: #dddddd;
+            border-radius: 0;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .dotactive {
+            background-color: #1976D2;
+        }
     </style>
 
 </head>
@@ -198,9 +213,6 @@
     </center>
 
     <div class="row">
-
-
-        <div style="width:12px; height:12px; color:brown"></div>
 
         <div class="stages-container col l8 offset-l2 m10 offset-m1 s12">
 
@@ -495,6 +507,16 @@
                 </div>
             </form>
         </div>
+
+
+        <div class="col s12" style="text-align:center">
+            <span class="dot dotactive"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
     </div>
 
 
@@ -618,7 +640,9 @@
     $(".button-collapse").sideNav();
 
     var currentStage = 1;
-    var noOfStages = 6;
+    var noOfStages = 6;    
+
+    var dots = document.getElementsByClassName("dot");
 
     $(document).ready(function () {
         $('.parallax').parallax();
@@ -661,6 +685,8 @@
             document.getElementById('nexttxt').innerHTML = "submit";
         }
         document.getElementById('prevbtn').classList.remove('disabled');
+
+        updateDots();
     }
 
     function prev() {
@@ -672,6 +698,15 @@
         if (currentStage == 1) {
             document.getElementById('prevbtn').classList.add('disabled');
         }
+
+        updateDots();
+    }
+
+    function updateDots() {
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" dotactive", "");
+        }
+        dots[currentStage-1].className += " dotactive";
     }
 
 </script>
