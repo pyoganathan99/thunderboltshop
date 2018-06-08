@@ -89,6 +89,10 @@
             margin-bottom: -80px;
         }
 
+        .stages {
+            box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
+        }
+
         .center-cropped {
             width: 240px;
             height: 240px;
@@ -99,6 +103,25 @@
         .material-icons {
             vertical-align: middle;
         }
+
+        .stages-container {
+            padding-left: 24px !important;
+            padding-right: 24px !important;
+        }
+
+        textarea {
+            height: 124px !important;
+            resize: none !important;
+            line-height: 2.4;
+            /* Remove this if you want the user to resize the textarea */
+        }
+
+        .collapsible {
+            margin: 24px;
+            height: 200px;
+            overflow: auto;
+        }
+
     </style>
 
 </head>
@@ -177,28 +200,189 @@
     </center>
 
     <div class="row">
-        <div class="col l8 offset-l2">
-            <div class="carousel z-depth-3 stages carousel-slider center">
+
+        <div class="stages-container col l8 offset-l2 m10 offset-m1 s12">
+
+            <form class="carousel stages z-depth-3 carousel-slider center">
+
                 <div class="carousel-fixed-item center">
-                    <a class="btn waves-effect white grey-text darken-text-2">button</a>
+                    <div>
+                        <a id="prevbtn" onclick="prev();" class="disabled btn-flat waves-effect">
+                            <i class="material-icons">keyboard_arrow_left</i>
+                            <span style="vertical-align:middle;">prev</span>
+                        </a>
+                        <a id="nextbtn" onclick="next();" class="btn-flat waves-effect">
+                            <span id="nexttxt" style="vertical-align:middle;">next</span>
+                            <i class="material-icons">keyboard_arrow_right</i>
+                        </a>
+
+                    </div>
+
                 </div>
-                <div class="carousel-item red z-depth-3" style="padding:2px;" href="#one!">
-                    <h2>First Panel</h2>
-                    <p>This is your first panel</p>
+
+                <div class="carousel-item" style="padding:2px;" href="#one!">
+                    <h2>Provide your assets</h2>
+                    <div class="row" style="position:relative;top:16%">
+                        <div class="col l8 offset-l2 col m10 offset-m1 s10 offset-s1 file-field input-field">
+                            <div class="btn blue">
+                                <span>Image</span>
+                                <input type="file">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text">
+                            </div>
+                            <h6>Share with us an image (optional)</h6>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="carousel-item amber" href="#two!">
-                    <h2>Second Panel</h2>
-                    <p>This is your second panel</p>
+                <div class="carousel-item" href="#two!">
+                    <h2>Share your ideas</h2>
+                    <h6 style="margin-left:12px;margin-right:12px;">Explain what we should do with as much details as possible. Or indicate if you want us to get creative.</h6>
+                    <div class="row" style="margin-top:24px;">
+                        <div class="input-field col l10 offset-l1 col m10 offset-m1 s10 offset-s1">
+                            <textarea id="textarea1" class="materialize-textarea" rows=3></textarea>
+                        </div>
+                    </div>
                 </div>
-                <div class="carousel-item green " href="#three!">
-                    <h2>Third Panel</h2>
-                    <p>This is your third panel</p>
+                <div class="carousel-item " href="#three!">
+                    <h2>Choose all that you want</h2>
+                    <h6>We'll show you our work before embedding them</h6>
+                    <div class="row">
+
+                        <ul class="collapsible z-depth-0  l8 offset-l2 col m10 offset-m1 s10 offset-s1" data-collapsible="expandable">
+                            <li>
+                                <div class="collapsible-header">
+                                    <div style="width:100%">
+                                        <div style="float:left;">
+                                            <i class="material-icons blue-text">check_box_outline_blank</i> Poster
+                                        </div>
+                                        <div style="float:right;">Rs. 50</div>
+                                        <div style="clear:both;"></div>
+                                    </div>
+                                </div>
+                                <div class="collapsible-body row">
+                                    <div class="input-field col s9">
+                                        <input placeholder="Size, color, any text, etc" id="poster" type="text">
+                                        <label for="poster">Description</label>
+                                    </div>
+                                    <div class="input-field col s3">
+                                        <input value="1" id="posterq" type="text">
+                                        <label for="posterq">Quantity</label>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="collapsible-header">
+                                    <div style="width:100%">
+                                        <div style="float:left;">
+                                            <i class="material-icons orange-text">check_box_outline_blank</i>Framed
+                                        </div>
+                                        <div style="float:right;">Rs. 150</div>
+                                        <div style="clear:both;"></div>
+                                    </div>
+                                </div>
+                                <div class="collapsible-body row">
+                                    <div class="input-field col s9">
+                                        <input placeholder="Size, color, any text, etc" id="framed" type="text">
+                                        <label for="framed">Description</label>
+                                    </div>
+                                    <div class="input-field col s3">
+                                        <input value="1" id="framedq" type="text">
+                                        <label for="framedq">Quantity</label>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="collapsible-header">
+                                    <div style="width:100%">
+                                        <div style="float:left;">
+                                            <i class="material-icons pink-text">check_box_outline_blank</i>Greeting Card
+                                        </div>
+                                        <div style="float:right;">Rs. 50</div>
+                                        <div style="clear:both;"></div>
+                                    </div>
+                                </div>
+                                <div class="collapsible-body">
+                                    <span>
+                                    <div class="input-field col s12">
+                                        <input placeholder="Happy Birthday!" id="greeting" type="text">
+                                        <label for="greeting">Greeting/Wish</label>
+                                    </div>
+                                    <div class="input-field col s9">
+                                        <input placeholder="White" id="greetingc" type="text">
+                                        <label for="greetingc">Color</label>
+                                    </div>
+                                    <div class="input-field col s3">
+                                        <input value="1" id="greetingq" type="text">
+                                        <label for="greetingq">Quantity</label>
+                                    </div>
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="collapsible-header">
+                                    <div style="width:100%">
+                                        <div style="float:left;">
+                                            <i class="material-icons indigo-text">check_box_outline_blank</i>Calendar
+                                        </div>
+                                        <div style="float:right;">Rs. 100</div>
+                                        <div style="clear:both;"></div>
+                                    </div>
+                                </div>
+                                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                            </li>
+
+                            <li>
+                                <div class="collapsible-header">
+                                    <div style="width:100%">
+                                        <div style="float:left;">
+                                            <i class="material-icons teal-text">check_box_outline_blank</i>T-Shirt
+                                        </div>
+                                        <div style="float:right;">Rs. 200</div>
+                                        <div style="clear:both;"></div>
+                                    </div>
+                                </div>
+                                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                            </li>
+
+                            <li>
+                                <div class="collapsible-header">
+                                    <div style="width:100%">
+                                        <div style="float:left;">
+                                            <i class="material-icons deep-orange-text">check_box_outline_blank</i>Mug
+                                        </div>
+                                        <div style="float:right;">Rs. 200</div>
+                                        <div style="clear:both;"></div>
+                                    </div>
+                                </div>
+                                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                            </li>
+
+                            <li>
+                                <div class="collapsible-header">
+                                    <div style="width:100%">
+                                        <div style="float:left;">
+                                            <i class="material-icons green-text">check_box_outline_blank</i>Phone Case (Experimental)
+                                        </div>
+                                        <div style="float:right;">Rs. 250</div>
+                                        <div style="clear:both;"></div>
+                                    </div>
+                                </div>
+                                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                            </li>
+
+                        </ul>
+                    </div>
                 </div>
-                <div class="carousel-item blue" href="#four!">
+                <div class="carousel-item" href="#four!">
                     <h2>Fourth Panel</h2>
                     <p>This is your fourth panel</p>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 
@@ -322,19 +506,55 @@
 <script>
     $(".button-collapse").sideNav();
 
+    var currentStage = 1;
+    var noOfStages = 4;
+
     $(document).ready(function () {
         $('.parallax').parallax();
         $('.products').carousel();
 
-        $('.stages').carousel({ fullWidth: true });
+        var carousel = $('.stages').carousel({ fullWidth: true, noWrap: true });
+        //Disable all swipping on carousel
+        if (typeof window.ontouchstart !== 'undefined') {
+            carousel.off('touchstart.carousel');
+        }
+        carousel.off('mousedown.carousel');
 
-        // var carousel = $('.stages').carousel();
-        // // Disable all swipping on carousel
-        // if (typeof window.ontouchstart !== 'undefined') {
-        //     carousel.off('touchstart.carousel');
-        // }
-        // carousel.off('mousedown.carousel');
+        $('.collapsible').collapsible({
+            onOpen: function (el) { el[0].children[0].children[0].children[0].children[0].innerHTML = "check_box" }, // Callback for Collapsible open
+            onClose: function (el) { el[0].children[0].children[0].children[0].children[0].innerHTML = "check_box_outline_blank" } // Callback for Collapsible close
+        });
+
+        repeat();
     });
+
+    function repeat(){
+        setTimeout(()=>{$('.products').carousel('next'); repeat();},1500)
+    }
+
+    function next() {
+        if (currentStage == noOfStages) {
+            submit();
+            return;
+        }
+        $('.stages').carousel('next');
+        currentStage++;
+        if (currentStage == noOfStages) {
+            document.getElementById('nexttxt').innerHTML = "submit";
+        }
+        document.getElementById('prevbtn').classList.remove('disabled');
+    }
+
+    function prev() {
+        $('.stages').carousel('prev');
+        if (currentStage == noOfStages) {
+            document.getElementById('nexttxt').innerHTML = "next";
+        }
+        currentStage--;
+        if (currentStage == 1) {
+            document.getElementById('prevbtn').classList.add('disabled');
+        }
+    }
 
 </script>
 
