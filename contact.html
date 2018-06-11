@@ -96,7 +96,7 @@
         }
 
         .carousel {
-            top:-80px;
+            top: -80px;
             height: 450px;
             margin-bottom: 64px;
         }
@@ -216,7 +216,7 @@
 
                 <div class="row card z-depth-3">
                     <div style="padding:0px;" class="col l4 m4 s12">
-                        <img style="width:100%;" src="vinod.jpg">
+                        <img style="width:100%;" src="vinod.png">
                     </div>
                     <div class="col l8 m8 s12">
                         <div style="padding:12px;">
@@ -235,7 +235,7 @@
     <div class="row">
         <div style="padding:12px;" class="col l8 offset-l2 m10 offset-m1 s12">
             <center>
-                <h5>The CANDiD Team</h5>
+                <h5>The <b><span class="black-text">CAND<span class="red-text">i</span>D</span></b> Team</h5>
                 <h4 style="font-size:x-large; margin:48px;"><i>"Your dream is only a dream until you start working..."</i></h4>
                 <h6 style="font-size:large; line-height:1.5">Well this may seem a bit blunt, but we are a group of students who do a lot of things.
                     <i class="material-icons pink-text">favorite</i><br> We are a passionate bundle <i class="material-icons orange-text">whatshot</i>                    trying to achive something good.<br> Enjoying what we do makes us who we are, we develop, we code, we
@@ -246,27 +246,71 @@
         </div>
         <div style="margin-top:24px;" class="col row l4 offset-l4 m6 offset-m3 s12">
             <div class="col s4">
-                <img style="width:100%;" class="z-depth-2" src="radio.png">
+                <img style="width:100%;" class="z-depth-3" src="radio.png">
             </div>
             <div class="col s4">
-                <img style="width:100%;" class="z-depth-2" src="uprising.jpeg">
+                <img style="width:100%;" class="z-depth-3" src="uprising.jpeg">
             </div>
-            <div class="col s4">c</div>
+            <div class="col s4">
+                <img style="width:100%;" class="z-depth-3" src="tb.jpg">
+            </div>
         </div>
     </div>
     <div class="carousel">
         <a class="carousel-item" href="#one!">
             <div class="z-depth-3">
                 <img style="width:100%" src="yogi.png">
-                <div style="padding:16px;">
-                    <h5 style="font-size:large; margin-bottom:-24px;">Yoganathan Palaniswamy</h5><br>
-                    <h6>Developer</h6>
+                <div class="white" style="padding:16px;">
+                    <h5 class="cyan-text" style="font-size:large; margin-bottom:-24px;">Yoganathan Palaniswamy</h5><br>
+                    <h6 class="black-text">Lead Developer</h6>
                 </div>
             </div>
         </a>
-        <a class="carousel-item" href="#two!"><img src="mani.png"></a>
-        <a class="carousel-item" href="#three!"><img src="vinod.jpg"></a>
-        <a class="carousel-item" href="#four!"><img src="AVR.jpg"></a>
+        <a class="carousel-item" href="#two!">
+            <div class="z-depth-3">
+                <img style="width:100%" src="mani.png">
+                <div class="white" style="padding:16px;">
+                    <h5 class="red-text" style="font-size:large; margin-bottom:-24px;">Subramaniyam S</h5><br>
+                    <h6 class="black-text">Creative head</h6>
+                </div>
+            </div>
+        </a>
+        <a class="carousel-item" href="#three!">
+            <div class="z-depth-3">
+                <img style="width:100%" src="vinod.png">
+                <div class="white" style="padding:16px;">
+                    <h5 class="green-text" style="font-size:large; margin-bottom:-24px;">Vinod Arjun</h5><br>
+                    <h6 class="black-text">ML Developer</h6>
+                </div>
+            </div>
+        </a>
+        <a class="carousel-item" href="#four!">
+            <div class="z-depth-3">
+                <img style="width:100%" src="AVR.jpg">
+                <div class="white" style="padding:16px;">
+                    <h5 class="deep-purple-text" style="font-size:large; margin-bottom:-24px;">Vishal Raj A</h5><br>
+                    <h6 class="black-text">Artist</h6>
+                </div>
+            </div>
+        </a>
+        <a class="carousel-item" href="#four!">
+            <div class="z-depth-3">
+                <img style="width:100%" src="sri.png">
+                <div class="white" style="padding:16px;">
+                    <h5 class="blue-text" style="font-size:large; margin-bottom:-24px;">Sriram Vasu</h5><br>
+                    <h6 class="black-text">Sports Head</h6>
+                </div>
+            </div>
+        </a>
+        <a class="carousel-item" href="#four!">
+            <div class="z-depth-3">
+                <img style="width:100%" src="viki.png">
+                <div class="white" style="padding:16px;">
+                    <h5 class="orange-text" style="font-size:large; margin-bottom:-24px;">Vignesh S</h5><br>
+                    <h6 class="black-text">Web Developer</h6>
+                </div>
+            </div>
+        </a>
     </div>
 
 
@@ -287,6 +331,12 @@
     $(document).ready(function () {
         $('.carousel').carousel({ padding: 24 });
     });
+
+    repeat();
+    
+    function repeat() {
+        setTimeout(() => { $('.carousel').carousel('next'); repeat(); }, 1500)
+    }
 
 </script>
 
