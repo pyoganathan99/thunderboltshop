@@ -137,8 +137,28 @@
             transition: background-color 0.6s ease;
         }
 
-        .dotactive {
-            background-color: #1976D2;
+        .dotactive:nth-child(1) {
+            background-color: #2196f3;
+        }
+
+        .dotactive:nth-child(2) {
+            background-color: #fb8c00;
+        }
+
+        .dotactive:nth-child(3) {
+            background-color: #4caf50;
+        }
+
+        .dotactive:nth-child(4) {
+            background-color: #e91e63;
+        }
+
+        .dotactive:nth-child(5) {
+            background-color: #9c27b0;
+        }
+
+        .dotactive:nth-child(6) {
+            background-color: #00bcd4;
         }
     </style>
 
@@ -153,10 +173,8 @@
                 <a href="#" class="brand-logo black-text">Thunderbolt Shop</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse black-text"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a class="black-text">Crafts</a></li>
-                    <li><a class="black-text">Arts</a></li>
-                    <li><a class="black-text">Posters</a></li>
-                    <li><a class="black-text">Contact Us</a></li>
+                    <li><a class="black-text">Art &amp; Craft</a></li>
+                    <li><a class="black-text">Software Works</a></li>
                 </ul>
             </div>
         </nav>
@@ -165,7 +183,7 @@
 
 
     <ul class="side-nav" id="mobile-demo">
-        <img src="background1.png" width="300px" style="margin-bottom:24px">
+        <img src="preview.jpg" width="300px" style="margin-bottom:24px">
         <li><a class="black-text">Crafts</a></li>
         <li><a class="black-text">Arts</a></li>
         <li><a class="black-text">Posters</a></li>
@@ -205,6 +223,7 @@
         <span><h5 style="margin:24px; margin-top:36px; color:rgba(0, 0, 0, 0.8)">Let's get your order placed!</h5></span>
         <span>
             <h6>
+                <b>Important: </b> Service available only within Chennai
             </h6>
         </span>
 
@@ -239,7 +258,7 @@
                         <div class="col l8 offset-l2 col m10 offset-m1 s10 offset-s1 file-field input-field">
                             <div class="btn blue">
                                 <span>Image</span>
-                                <input type="file">
+                                <input type="file" accept="image/*">
                             </div>
                             <div class="file-path-wrapper">
                                 <input class="file-path validate" type="text">
@@ -431,7 +450,7 @@
                             <div class="collapsible-header">
                                 <div style="width:100%">
                                     <div style="float:left;">
-                                        <i class="material-icons blue-text">check_box_outline_blank</i> Deadline?
+                                        <i class="material-icons green-text">check_box_outline_blank</i> Deadline?
                                     </div>
                                     <div style="clear:both;"></div>
                                 </div>
@@ -448,7 +467,7 @@
                             <div class="collapsible-header">
                                 <div style="width:100%">
                                     <div style="float:left;">
-                                        <i class="material-icons blue-text">check_box_outline_blank</i> Gift Wrapping
+                                        <i class="material-icons pink-text">check_box_outline_blank</i> Gift Wrapping
                                     </div>
                                     <div style="float:right;">Rs. 15</div>
                                     <div style="clear:both;"></div>
@@ -466,7 +485,7 @@
                     <div class="row">
                         <div class="row col l8 offset-l2 m12 s12" style="padding:12px;">
                             <div class="input-field col m6 offset-m3 s12">
-                                <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                                <input id="first_name" type="text" class="validate">
                                 <label for="first_name">Name</label>
                             </div>
                             <div class="input-field col m6 offset-m3 s12">
@@ -476,7 +495,7 @@
                             <div class="col s12">
                                 <h6>How would you like us to contact you?</h6>
                                 <span>
-                                    <input name="group1" class="with-gap" type="radio" id="email" />
+                                    <input name="group1" class="with-gap blue-text" type="radio" id="email" />
                                     <label for="email">E-mail</label>
                                 </span>
                                 <span>
@@ -535,7 +554,7 @@
 
                     <div class="card">
                         <div class="card-image">
-                            <img src="sample1.jpg">
+                            <img src="preview.jpg">
                         </div>
                         <div class="card-content">
                             <span class="card-title">Item 1</span>
@@ -640,7 +659,7 @@
     $(".button-collapse").sideNav();
 
     var currentStage = 1;
-    var noOfStages = 6;    
+    var noOfStages = 6;
 
     var dots = document.getElementsByClassName("dot");
 
@@ -706,7 +725,7 @@
         for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" dotactive", "");
         }
-        dots[currentStage-1].className += " dotactive";
+        dots[currentStage - 1].className += " dotactive";
     }
 
 </script>
