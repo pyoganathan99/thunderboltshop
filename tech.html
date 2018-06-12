@@ -300,8 +300,8 @@
                     <label for="contact">Contact</label>
                 </div>
                 <div class="input-field col m6 offset-m3 s12">
-                    <textarea id="textarea1" class="materialize-textarea" rows=3></textarea>
-                    <label for="textarea1">Leave us a message</label>
+                    <textarea id="message" class="materialize-textarea" rows=3></textarea>
+                    <label for="message">Leave us a message</label>
                 </div>
                 <div class="col s12 center">
                     <h6>How would you like us to contact you?</h6>
@@ -319,7 +319,7 @@
                     </span>
                 </div>
                 <div class="col s12 center" style="margin-top:24px;">
-                    <a class="waves-effect blue btn-large waves-light btn"><i class="material-icons right">send</i>submit</a>
+                    <a onclick="submit();" class="waves-effect blue btn-large waves-light btn"><i class="material-icons right">send</i>submit</a>
                 </div>
             </div>
         </div>
@@ -334,6 +334,22 @@
 
 </body>
 
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyBDCr-B3A8USVuwsEQ1zMrdIfsrmMXQzEg",
+        authDomain: "thunderbolt-shop.firebaseapp.com",
+        databaseURL: "https://thunderbolt-shop.firebaseio.com",
+        projectId: "thunderbolt-shop",
+        storageBucket: "thunderbolt-shop.appspot.com",
+        messagingSenderId: "292348819143"
+    };
+    firebase.initializeApp(config);
+
+</script>
+
+
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
@@ -343,6 +359,33 @@
     $(document).ready(function () {
         $('.carousel').carousel({ padding: 24 });
     });
+
+    function submit() {
+        var first_name = $("#first_name").val().trim();
+        var contact = $("#contact").val().trim();
+
+        if (!(first_name && contact)) {
+            Materialize.toast('You haven\'t provided sufficient contact information...', 2000, 'rounded');
+            return;
+        }
+        
+        var finalObject = {
+            name: first_name,
+            contact: contact,
+            message: $("#message").val(),
+            contact_medium: ($("#email").is(":checked") ? "email" : ($("#call").is(":checked") ? "call" : "whatsapp")),
+        };
+
+        firebase.database().ref("tech/").push(finalObject).then(
+            function(){
+                Materialize.toast('Message sent successfully!', 2000, 'rounded');
+            }
+        ).catch(
+            function(){
+                Materialize.toast('Unable to send message, try again', 2000, 'rounded');
+            }
+        )
+    }
 
 </script>
 
