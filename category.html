@@ -258,7 +258,7 @@
                         <div class="col l8 offset-l2 col m10 offset-m1 s10 offset-s1 file-field input-field">
                             <div class="btn blue">
                                 <span>Image</span>
-                                <input type="file" accept="image/*">
+                                <input id="image" type="file" accept="image/*">
                             </div>
                             <div class="file-path-wrapper">
                                 <input class="file-path validate" type="text">
@@ -274,7 +274,7 @@
                     <h6 style="margin-left:12px;margin-right:12px;">Explain what we should do with as much details as possible. Or indicate if you want us to get creative.</h6>
                     <div class="row" style="margin-top:24px;">
                         <div class="input-field col l10 offset-l1 col m10 offset-m1 s10 offset-s1">
-                            <textarea id="textarea1" class="materialize-textarea" rows=3></textarea>
+                            <textarea id="ideas" class="materialize-textarea" rows=3></textarea>
                         </div>
                     </div>
                 </div>
@@ -285,7 +285,7 @@
                     <div class="row">
 
                         <ul class="collapsible z-depth-0  l8 offset-l2 col m10 offset-m1 s10 offset-s1" data-collapsible="expandable">
-                            <li>
+                            <li id="li-poster">
                                 <div class="collapsible-header">
                                     <div style="width:100%">
                                         <div style="float:left;">
@@ -307,7 +307,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li id="li-framed">
                                 <div class="collapsible-header">
                                     <div style="width:100%">
                                         <div style="float:left;">
@@ -325,7 +325,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li id="li-greeting">
                                 <div class="collapsible-header">
                                     <div style="width:100%">
                                         <div style="float:left;">
@@ -351,7 +351,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li id="li-calendar">
                                 <div class="collapsible-header">
                                     <div style="width:100%">
                                         <div style="float:left;">
@@ -369,7 +369,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li id="li-tee">
                                 <div class="collapsible-header">
                                     <div style="width:100%">
                                         <div style="float:left;">
@@ -381,13 +381,13 @@
                                 </div>
                                 <div class="collapsible-body row">
                                     <div class="input-field col s12">
-                                        <input placeholder="Size, color &amp; type" id="tees" type="text">
-                                        <label for="tees">Let's get it customised!</label>
+                                        <input placeholder="Size, color &amp; type" id="tee" type="text">
+                                        <label for="tee">Let's get it customised!</label>
                                     </div>
                                 </div>
                             </li>
 
-                            <li>
+                            <li id="li-mug">
                                 <div class="collapsible-header">
                                     <div style="width:100%">
                                         <div style="float:left;">
@@ -405,7 +405,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li id="li-case">
                                 <div class="collapsible-header">
                                     <div style="width:100%">
                                         <div style="float:left;">
@@ -423,7 +423,7 @@
                                 </div>
                             </li>
 
-                            <li>
+                            <li id="li-custom">
                                 <div class="collapsible-header">
                                     <div style="width:100%">
                                         <div style="float:left;">
@@ -446,7 +446,7 @@
                 <div class="carousel-item" href="#four!">
                     <h2>For a special occasion?</h2>
                     <ul class="collapsible z-depth-0  l8 offset-l2 col m10 offset-m1 s10 offset-s1" data-collapsible="expandable">
-                        <li>
+                        <li id="li-deadline">
                             <div class="collapsible-header">
                                 <div style="width:100%">
                                     <div style="float:left;">
@@ -463,7 +463,7 @@
                             </div>
                         </li>
 
-                        <li>
+                        <li id="li-wrap">
                             <div class="collapsible-header">
                                 <div style="width:100%">
                                     <div style="float:left;">
@@ -512,16 +512,12 @@
                 </div>
 
                 <div class="carousel-item" href="#four!">
-                    <h2>Finishing up!</h2>
-                    <h6 style="margin:12px;">
-                        Check these details and we're done.<br> Expect a further direct correspondance from us, for the exact
-                        pricing and delivery location.
-                    </h6>
-                    <div>
-                        <bl>
-                            <li>Poster x 1</li>
-                            <li>Phone case</li>
-                        </bl>
+                    <h2>Almost done!</h2>
+                    <div class="row">
+                        <h6 class="col l8 offset-l2 m10 offset-m1 s12" style="font-size:large">
+                            Expect a further direct correspondance from us, for the exact pricing and delivery location.<br><br>                            All orders come withing the original artwork created by the artist.<br><br> Thank you! Now you
+                            can confirm the order.&ensp;<i class="material-icons pink-text">favorite</i>
+                        </h6>
                     </div>
                 </div>
             </form>
@@ -640,8 +636,20 @@
 
         </div>
 
-        <div class="col l1"></div>
+    </div>
 
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4 id="modal_title" style="font-size:x-large">Confirming order...</h4>
+            <br>
+            <div class="progress cyan lighten-5">
+                <div id="progress_bar" class="determinate cyan" style="width: 0%"></div>
+            </div>
+
+        </div>
+        <div class="modal-footer">
+            <a href="#!" id="ok_btn" class="modal-action modal-close waves-effect btn-flat" disabled>ok</a>
+        </div>
     </div>
 
     <footer class="page-footer blue">
@@ -652,6 +660,21 @@
 
 </body>
 
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyBDCr-B3A8USVuwsEQ1zMrdIfsrmMXQzEg",
+        authDomain: "thunderbolt-shop.firebaseapp.com",
+        databaseURL: "https://thunderbolt-shop.firebaseio.com",
+        projectId: "thunderbolt-shop",
+        storageBucket: "thunderbolt-shop.appspot.com",
+        messagingSenderId: "292348819143"
+    };
+    firebase.initializeApp(config);
+
+</script>
+
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
@@ -661,11 +684,14 @@
     var currentStage = 1;
     var noOfStages = 6;
 
+    var chosenProducts = [];
+
     var dots = document.getElementsByClassName("dot");
 
     $(document).ready(function () {
         $('.parallax').parallax();
         $('.products').carousel();
+        $('.modal').modal();
 
         var carousel = $('.stages').carousel({ fullWidth: true, noWrap: true });
         //Disable all swipping on carousel
@@ -682,8 +708,14 @@
         carousel.off('mousedown.carousel');
 
         $('.collapsible').collapsible({
-            onOpen: function (el) { el[0].children[0].children[0].children[0].children[0].innerHTML = "check_box" }, // Callback for Collapsible open
-            onClose: function (el) { el[0].children[0].children[0].children[0].children[0].innerHTML = "check_box_outline_blank" } // Callback for Collapsible close
+            onOpen: function (el) {
+                el[0].children[0].children[0].children[0].children[0].innerHTML = "check_box";
+                chosenProducts.push(el[0].id);
+            },
+            onClose: function (el) {
+                el[0].children[0].children[0].children[0].children[0].innerHTML = "check_box_outline_blank";
+                chosenProducts.pop(el[0].id);
+            }
         });
 
         repeat();
@@ -694,6 +726,9 @@
     }
 
     function next() {
+        if (currentStage == noOfStages - 1) {
+            finalyze();
+        }
         if (currentStage == noOfStages) {
             submit();
             return;
@@ -726,6 +761,123 @@
             dots[i].className = dots[i].className.replace(" dotactive", "");
         }
         dots[currentStage - 1].className += " dotactive";
+    }
+
+    function finalyze() {
+
+    }
+
+    function submit() {
+        console.log('submit');
+
+        var ideas = $('#ideas').val().trim();
+
+        if (!ideas) {
+            Materialize.toast('You haven\'t shared your ideas yet...', 2000, 'rounded');
+            $('.stages').carousel('set', 1);
+            document.getElementById('nexttxt').innerHTML = "next";
+            currentStage = 2;
+            updateDots();
+            $('#ideas').focus();
+            return;
+        }
+
+        if (!(chosenProducts.filter(item => item != 'li-deadline' && item != 'li-wrap')).length) {
+            Materialize.toast('You haven\'t chose any products yet...', 2000, 'rounded');
+            $('.stages').carousel('set', 2);
+            document.getElementById('nexttxt').innerHTML = "next";
+            currentStage = 3;
+            updateDots();
+            return;
+        }
+
+        var first_name = $("#first_name").val().trim();
+        var contact = $("#contact").val().trim();
+
+        if (!(first_name && contact)) {
+            Materialize.toast('You haven\'t provided sufficient contact information...', 2000, 'rounded');
+            $('.stages').carousel('set', 4);
+            document.getElementById('nexttxt').innerHTML = "next";
+            currentStage = 5;
+            updateDots();
+            return;
+        }
+
+        var finalObject = {
+            name: first_name,
+            contact: contact,
+            ideas: $("#ideas").val(),
+            contact_medium: ($("#email").is(":checked") ? "email" : ($("#call").is(":checked") ? "call" : "whatsapp")),
+            orders: chosenProducts,
+            parameters: {
+                poster: $("#poster").val(),
+                poster_qty: $("#posterq").val(),
+                framed: $("#framed").val(),
+                greeting: $("#greeting").val(),
+                greeting_color: $("#greetingc").val(),
+                greeting_qty: $("#greetingq").val(),
+                calendar: $("#calendar").val(),
+                tee: $("#tee").val(),
+                mug: $("#mug").val(),
+                case: $("#case").val(),
+                custom: $("#custom").val(),
+                deadline: $("#date").val(),
+            }
+        };
+
+        console.log(finalObject);
+
+        $("#ok_btn").attr("disabled", "disabled");
+        $("#modal_title").html("Confirming order");
+        $("#progress_bar").className = "indeterminate";
+        $("#progress_bar").css("width", "0%");
+        $('#modal1').modal('open');
+
+        firebase.database().ref("orders/").push(finalObject).then(
+
+            e => {
+
+                var file = document.querySelector('input[type=file]').files[0];
+
+                if (file) {
+
+                    $("#progress_bar").className = "determinate";
+                    $("#modal_title").html("Uploading image");
+
+                    firebase.storage().ref("images/" + e.key).put(file).on('state_changed',
+                        snapshot => $("#progress_bar").css("width", ((snapshot.bytesTransferred / snapshot.totalBytes) * 100) + "%"),
+                        err => {
+                            $("#modal_title").html("Oops, something went wrong, try again")
+                            $("#ok_btn").removeAttr("disabled");
+                        },
+                        function () {
+                            $("#modal_title").html("Order confirmed!");
+                            $("#ok_btn").removeAttr("disabled");
+                        });
+
+                } else {
+                    $("#modal_title").html("Order confirmed!");
+                    $("#progress_bar").className = "determiante";
+                    $("#progress_bar").css("width", "100%");
+                    $("#ok_btn").removeAttr("disabled");
+                }
+
+            }
+
+        ).catch(err => {
+            $("#modal_title").html("Oops, something went wrong, try again");
+            $("#ok_btn").removeAttr("disabled");
+        });
+
+
+        if (file) {
+
+            firebase.storage().ref("images/" + file.name).put(file).on('state_changed',
+                snapshot => $("#progress_bar").css("width", ((snapshot.bytesTransferred / snapshot.totalBytes) * 100) + "%"),
+                error => console.log(error));
+
+        }
+
     }
 
 </script>
