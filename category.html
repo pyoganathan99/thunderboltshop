@@ -33,53 +33,6 @@
             font-family: 'Open Sans', sans-serif;
         }
 
-        .parallax-container {
-            height: 240px;
-        }
-
-        .parallax-container {
-            min-height: 380px;
-            line-height: 0;
-            height: auto;
-            color: rgba(255, 255, 255, .9);
-        }
-
-        .parallax-container .section {
-            width: 100%;
-        }
-
-        @media only screen and (max-width: 992px) {
-            .parallax-container .section {
-                position: absolute;
-                top: 40%;
-            }
-            #index-banner .section {
-                top: 10%;
-            }
-        }
-
-
-        @media only screen and (max-width: 600px) {
-            #index-banner .section {
-                top: 0;
-            }
-        }
-
-        .icon-block {
-            padding: 0 15px;
-        }
-
-        .icon-block .material-icons {
-            font-size: inherit;
-        }
-
-        .card {
-            margin-left: 0px;
-            margin-right: 0px;
-            margin-top: 12px;
-            margin-bottom: 12px;
-        }
-
         .products .products>.carousel-item {
             width: 240px !important;
         }
@@ -91,13 +44,6 @@
 
         .stages {
             box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
-        }
-
-        .center-cropped {
-            width: 240px;
-            height: 240px;
-            background-position: center center;
-            background-repeat: no-repeat;
         }
 
         .material-icons {
@@ -127,7 +73,6 @@
         }
 
         .dot {
-            cursor: pointer;
             height: 3px;
             width: 18px;
             margin: 0 2px;
@@ -160,6 +105,16 @@
         .dotactive:nth-child(6) {
             background-color: #00bcd4;
         }
+
+        .card {
+            border-radius: 4px;
+        }
+
+        .materialboxed {
+            border-top-left-radius: 4px !important;
+            border-top-right-radius: 4px !important;
+        }
+
     </style>
 
 </head>
@@ -170,11 +125,12 @@
 
         <nav class="white">
             <div class="nav-wrapper">
-                <a href="#" class="brand-logo black-text">Thunderbolt Shop</a>
+                <a href="home.html" class="brand-logo black-text">Thunderbolt Shop</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse black-text"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a class="black-text">Art &amp; Craft</a></li>
-                    <li><a class="black-text">Software Works</a></li>
+                    <li><a href="category.html" class="black-text">Art &amp; Craft</a></li>
+                    <li><a href="tech.html" class="black-text">Software Works</a></li>
+                    <li><a href="contact.html" class="black-text">Contact Us</a></li>
                 </ul>
             </div>
         </nav>
@@ -184,10 +140,12 @@
 
     <ul class="side-nav" id="mobile-demo">
         <img src="preview.jpg" width="300px" style="margin-bottom:24px">
-        <li><a class="black-text">Crafts</a></li>
-        <li><a class="black-text">Arts</a></li>
-        <li><a class="black-text">Posters</a></li>
-        <li><a class="black-text">Contact Us</a></li>
+        <center>
+            <h6>Art by Sujitha A</h6>
+        </center><br>
+        <li><a href="category.html" class="black-text">Art &amp; Craft</a></li>
+        <li><a href="tech.html" class="black-text">Software Works</a></li>
+        <li><a href="contact.html" class="black-text">Contact Us</a></li>
     </ul>
 
     <center>
@@ -252,7 +210,7 @@
 
                 </div>
 
-                <div class="carousel-item" style="padding:2px;" href="#one!">
+                <div class="carousel-item" style="padding:2px;">
                     <h2>Provide your assets</h2>
                     <div class="row" style="position:relative;top:16%">
                         <div class="col l8 offset-l2 col m10 offset-m1 s10 offset-s1 file-field input-field">
@@ -269,7 +227,7 @@
 
                 </div>
 
-                <div class="carousel-item" href="#two!">
+                <div class="carousel-item" >
                     <h2>Share your ideas</h2>
                     <h6 style="margin-left:12px;margin-right:12px;">Explain what we should do with as much details as possible. Or indicate if you want us to get creative.</h6>
                     <div class="row" style="margin-top:24px;">
@@ -279,7 +237,7 @@
                     </div>
                 </div>
 
-                <div class="carousel-item " href="#three!">
+                <div class="carousel-item">
                     <h2>Choose all that you want</h2>
                     <h6>We'll show you our work before proceeding</h6>
                     <div class="row">
@@ -443,7 +401,7 @@
                     </div>
                 </div>
 
-                <div class="carousel-item" href="#four!">
+                <div class="carousel-item">
                     <h2>For a special occasion?</h2>
                     <ul class="collapsible z-depth-0  l8 offset-l2 col m10 offset-m1 s10 offset-s1" data-collapsible="expandable">
                         <li id="li-deadline">
@@ -480,7 +438,7 @@
                     </ul>
                 </div>
 
-                <div class="carousel-item" href="#four!">
+                <div class="carousel-item">
                     <h2>Contact Details</h2>
                     <div class="row">
                         <div class="row col l8 offset-l2 m12 s12" style="padding:12px;">
@@ -511,7 +469,7 @@
                     </div>
                 </div>
 
-                <div class="carousel-item" href="#four!">
+                <div class="carousel-item">
                     <h2>Almost done!</h2>
                     <div class="row">
                         <h6 class="col l8 offset-l2 m10 offset-m1 s12" style="font-size:large">
@@ -538,23 +496,22 @@
 
     <div class="row">
 
-        <div class="col l1"></div>
-
-        <div class="col l10">
+        <div class="col m10 offset-m1">
 
             <h5 style="margin:24px; margin-top:36px; color:rgba(0, 0, 0, 0.8)">Check out our previous works...</h5>
 
             <div class="row">
 
+
                 <div class="col s12 m6 l3">
 
-                    <div class="card">
+                    <div class="card z-depth-3">
                         <div class="card-image">
-                            <img src="preview.jpg">
+                            <img class="materialboxed" data-caption="Pencil Sketch by Vishal Raj A" src="avr3.jpg">
                         </div>
                         <div class="card-content">
-                            <span class="card-title">Item 1</span>
-                            <p>Item numbered 1</p>
+                            <span class="card-title">Pencil Sketch</span>
+                            <p>Vishal Raj A</p>
                         </div>
                     </div>
 
@@ -562,56 +519,47 @@
 
                 <div class="col s12 m6 l3">
 
-                    <div class="card">
+                    <div class="card z-depth-3">
                         <div class="card-image">
-                            <img src="sample2.jpg">
+                            <img class="materialboxed" data-caption="Pencil Sketch by Vishal Raj A" src="avr2.jpg">
                         </div>
                         <div class="card-content">
-                            <span class="card-title">Item 2</span>
-                            <p>Item numbered 2</p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col s12 m6 l3">
-
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="sample3.jpg">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title">Item 3</span>
-                            <p>Item numbered 3</p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col s12 m6 l3">
-
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="sample4.jpg">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title">Item 4</span>
-                            <p>Item numbered 4</p>
+                            <span class="card-title">Pencil Sketch</span>
+                            <p>Vishal Raj A</p>
                         </div>
                     </div>
 
                 </div>
 
 
-                <div class="col s12 m6 l3">
+                <div class="col s12 m12 l6">
 
-                    <div class="card">
+                    <div class="card z-depth-3">
                         <div class="card-image">
-                            <img src="sample5.png">
+                            <img class="materialboxed" data-caption="Coal Art by Sujitha A" src="preview.jpg">
                         </div>
                         <div class="card-content">
-                            <span class="card-title">Item 5</span>
-                            <p>Item numbered 5</p>
+                            <span class="card-title">Coal Art (Reworked)</span>
+                            <p>Sujitha A</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+
+                <div class="col s12 m12 l6">
+
+                    <div class="card z-depth-3">
+                        <div class="card-image">
+                            <img class="materialboxed" data-caption="Pencil Sketch by Vishal Raj A" src="avr4.jpg">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Pencil Sketch</span>
+                            <p>Vishal Raj A</p>
                         </div>
                     </div>
 
@@ -620,18 +568,75 @@
 
                 <div class="col s12 m6 l3">
 
-                    <div class="card">
+                    <div class="card z-depth-3">
                         <div class="card-image">
-                            <img src="sample6.png">
+                            <img class="materialboxed" data-caption="Pencil Sketch by Vishal Raj A" src="avr1.jpg">
                         </div>
                         <div class="card-content">
-                            <span class="card-title">Item 6</span>
-                            <p>Item numbered 6</p>
+                            <span class="card-title">Pencil Sketch</span>
+                            <p>Vishal Raj A</p>
                         </div>
                     </div>
 
                 </div>
 
+
+                <div class="col s12 m6 l3">
+
+                    <div class="card z-depth-3">
+                        <div class="card-image">
+                            <img class="materialboxed" data-caption="Pencil Sketch by Vishal Raj A" src="avr6.jpg">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Pencil Sketch</span>
+                            <p>Vishal Raj A</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col s12 m6 l3">
+
+                    <div class="card z-depth-3">
+                        <div class="card-image">
+                            <img class="materialboxed" data-caption="Pencil Sketch by Sujitha A" src="suji3.jpg">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Pencil Sketch</span>
+                            <p>Vishal Raj A</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col s12 m6 l3">
+
+                    <div class="card z-depth-3">
+                        <div class="card-image">
+                            <img class="materialboxed" data-caption="Colour Sketch by Sujitha A" src="suji2.jpg">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Colour Sketch</span>
+                            <p>Sujitha A</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col s12 m12 l6">
+
+                    <div class="card z-depth-3">
+                        <div class="card-image">
+                            <img class="materialboxed" data-caption="Coal Art by Sujitha A" src="suji5.jpg">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Coal Art</span>
+                            <p>Sujitha A</p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
         </div>
@@ -654,7 +659,7 @@
 
     <footer class="page-footer blue">
         <div class="container" style="padding-bottom:16px;">
-            From the team of <a class="white-text text-lighten-3" href="http://materializecss.com">CANDiD</a>
+            From the team of <a class="white-text text-lighten-3" href="contact.html">CANDiD</a>
         </div>
     </footer>
 
@@ -692,8 +697,9 @@
         $('.parallax').parallax();
         $('.products').carousel();
         $('.modal').modal();
+        $('.materialboxed').materialbox();
 
-        var carousel = $('.stages').carousel({ fullWidth: true, noWrap: true });
+        var carousel = $('.stages').carousel({ fullWidth: true, noWrap: true, duration:50 });
         //Disable all swipping on carousel
         if (typeof window.ontouchstart !== 'undefined') {
             carousel.off('touchstart.carousel');
@@ -726,9 +732,6 @@
     }
 
     function next() {
-        if (currentStage == noOfStages - 1) {
-            finalyze();
-        }
         if (currentStage == noOfStages) {
             submit();
             return;
@@ -761,10 +764,6 @@
             dots[i].className = dots[i].className.replace(" dotactive", "");
         }
         dots[currentStage - 1].className += " dotactive";
-    }
-
-    function finalyze() {
-
     }
 
     function submit() {
@@ -829,7 +828,6 @@
 
         $("#ok_btn").attr("disabled", "disabled");
         $("#modal_title").html("Confirming order");
-        $("#progress_bar").className = "indeterminate";
         $("#progress_bar").css("width", "0%");
         $('#modal1').modal('open');
 
@@ -841,7 +839,6 @@
 
                 if (file) {
 
-                    $("#progress_bar").className = "determinate";
                     $("#modal_title").html("Uploading image");
 
                     firebase.storage().ref("images/" + e.key).put(file).on('state_changed',
@@ -857,7 +854,6 @@
 
                 } else {
                     $("#modal_title").html("Order confirmed!");
-                    $("#progress_bar").className = "determiante";
                     $("#progress_bar").css("width", "100%");
                     $("#ok_btn").removeAttr("disabled");
                 }

@@ -125,6 +125,14 @@
         col {
             padding: 0px;
         }
+
+        .zoom {
+            transition: transform .2s;
+        }
+
+        .zoom:hover {
+            transform: scale(1.15);
+        }
     </style>
 
 </head>
@@ -135,11 +143,12 @@
 
         <nav class="white">
             <div class="nav-wrapper">
-                <a href="#" class="brand-logo black-text">Thunderbolt Shop </a>
+                <a href="home.html" class="brand-logo black-text">Thunderbolt Shop</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse black-text"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a class="black-text">Art &amp; Craft</a></li>
-                    <li><a class="black-text">Software Works</a></li>
+                    <li><a href="category.html" class="black-text">Art &amp; Craft</a></li>
+                    <li><a href="tech.html" class="black-text">Software Works</a></li>
+                    <li><a href="contact.html" class="black-text">Contact Us</a></li>
                 </ul>
             </div>
         </nav>
@@ -149,10 +158,12 @@
 
     <ul class="side-nav" id="mobile-demo">
         <img src="preview.jpg" width="300px" style="margin-bottom:24px">
-        <li><a class="black-text">Crafts</a></li>
-        <li><a class="black-text">Arts</a></li>
-        <li><a class="black-text">Posters</a></li>
-        <li><a class="black-text">Contact Us</a></li>
+        <center>
+            <h6>Art by Sujitha A</h6>
+        </center><br>
+        <li><a href="category.html" class="black-text">Art &amp; Craft</a></li>
+        <li><a href="tech.html" class="black-text">Software Works</a></li>
+        <li><a href="contact.html" class="black-text">Contact Us</a></li>
     </ul>
 
     <br>
@@ -245,19 +256,19 @@
             </center>
         </div>
         <div style="margin-top:24px;" class="col row l4 offset-l4 m6 offset-m3 s12">
-            <div class="col s4">
+            <div class="zoom col s4">
                 <img style="width:100%;" class="z-depth-3" src="radio.png">
             </div>
-            <div class="col s4">
+            <div class="zoom col s4">
                 <img style="width:100%;" class="z-depth-3" src="uprising.jpeg">
             </div>
-            <div class="col s4">
+            <div class="zoom col s4">
                 <img style="width:100%;" class="z-depth-3" src="tb.jpg">
             </div>
         </div>
     </div>
     <div class="carousel">
-        <a class="carousel-item" href="#one!">
+        <a class="carousel-item">
             <div class="z-depth-3">
                 <img style="width:100%" src="yogi.png">
                 <div class="white" style="padding:16px;">
@@ -266,7 +277,7 @@
                 </div>
             </div>
         </a>
-        <a class="carousel-item" href="#two!">
+        <a class="carousel-item">
             <div class="z-depth-3">
                 <img style="width:100%" src="mani.png">
                 <div class="white" style="padding:16px;">
@@ -275,7 +286,7 @@
                 </div>
             </div>
         </a>
-        <a class="carousel-item" href="#three!">
+        <a class="carousel-item">
             <div class="z-depth-3">
                 <img style="width:100%" src="vinod.png">
                 <div class="white" style="padding:16px;">
@@ -284,7 +295,16 @@
                 </div>
             </div>
         </a>
-        <a class="carousel-item" href="#four!">
+        <a class="carousel-item">
+            <div class="z-depth-3">
+                <img style="width:100%" src="sruthi.png">
+                <div class="white" style="padding:16px;">
+                    <h5 class="pink-text" style="font-size:large; margin-bottom:-24px;">Suruthi Prakalya R&nbsp;R</h5><br>
+                    <h6 class="black-text">Crafts / IoT</h6>
+                </div>
+            </div>
+        </a>
+        <a class="carousel-item">
             <div class="z-depth-3">
                 <img style="width:100%" src="AVR.jpg">
                 <div class="white" style="padding:16px;">
@@ -293,7 +313,25 @@
                 </div>
             </div>
         </a>
-        <a class="carousel-item" href="#four!">
+        <a class="carousel-item">
+            <div class="z-depth-3">
+                <img style="width:100%" src="suji.png">
+                <div class="white" style="padding:16px;">
+                    <h5 class="pink-text" style="font-size:large; margin-bottom:-24px;">Sujitha A</h5><br>
+                    <h6 class="black-text">Artist</h6>
+                </div>
+            </div>
+        </a>
+        <a class="carousel-item">
+            <div class="z-depth-3">
+                <img style="width:100%" src="shiva.png">
+                <div class="white" style="padding:16px;">
+                    <h5 class="deep-purple-text" style="font-size:large; margin-bottom:-24px;">Shivaranjini S</h5><br>
+                    <h6 class="black-text">Content Creator</h6>
+                </div>
+            </div>
+        </a>
+        <a class="carousel-item">
             <div class="z-depth-3">
                 <img style="width:100%" src="sri.png">
                 <div class="white" style="padding:16px;">
@@ -302,7 +340,7 @@
                 </div>
             </div>
         </a>
-        <a class="carousel-item" href="#four!">
+        <a class="carousel-item">
             <div class="z-depth-3">
                 <img style="width:100%" src="viki.png">
                 <div class="white" style="padding:16px;">
@@ -311,12 +349,21 @@
                 </div>
             </div>
         </a>
+        <a class="carousel-item">
+            <div class="z-depth-3">
+                <img style="width:100%" src="vishal.png">
+                <div class="white" style="padding:16px;">
+                    <h5 class="indigo-text" style="font-size:large; margin-bottom:-24px;">Vishalini S</h5><br>
+                    <h6 class="black-text">Designer</h6>
+                </div>
+            </div>
+        </a>
     </div>
 
 
     <footer class="page-footer blue">
         <div class="container" style="padding-bottom:16px;">
-            From the team of <a class="white-text text-lighten-3" href="http://materializecss.com">CANDiD</a>
+            From the team of <a class="white-text text-lighten-3" href="contact.html">CANDiD</a>
         </div>
     </footer>
 
@@ -333,7 +380,7 @@
     });
 
     repeat();
-    
+
     function repeat() {
         setTimeout(() => { $('.carousel').carousel('next'); repeat(); }, 1500)
     }
